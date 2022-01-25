@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const url = "http://localhost:8080/posts";
+// const url = "http://localhost:8080/posts";
+const url = process.env.REACT_APP_API_URL || "/posts";
 
 export const fetchPosts = () => axios.get(url);
 
